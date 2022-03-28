@@ -17,6 +17,17 @@ fn main() {
        let aa=&a;
        let aaa=&a;
     */
+
+    /*
+     我们必须将 String 返回给调用函数，以便在调用 calculate_length 后仍能使用 String，
+     因为 String 被移动到了 calculate_length 内。
+
+    下面是如何定义并使用一个（新的）calculate_length 函数，
+    它以一个对象的引用作为参数而不是获取值的所有权
+
+    &s1 语法让我们创建一个 指向 值 s1 的引用，但是并不拥有它。
+    因为并不拥有这个值，当引用离开作用域时其指向的值也不会被丢弃。
+     */
     let s1 = String::from("hello");
 
     let len = calculate_length(&s1);

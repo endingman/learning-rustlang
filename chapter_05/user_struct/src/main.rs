@@ -14,7 +14,7 @@ fn main() {
         String::from("someusername123"),
     );
 
-    println!("{:#?}", user1); //struct 打印方式
+    println!("{:#?}", user1); //结构体并没有提供一个 Display 实现。 struct 打印方式
 
     // change user1 email
     user1.email = String::from("anotheremail@example.com");
